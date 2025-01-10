@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="shortcut icon"
+      href="./images/fav-icon.png"
+      type="image/x-icon"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glowave</title>
+
+    <!-- gogle fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="/font/Mollie Glaston.ttf" />
+    <!-- tailwind css link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#00856F",
+              secondary: "#F7E6D9",
+              secondaryTwo: "#F9F1CE",
+              secondaryThree: "#FDFCF5",
+            },
+            fontFamily: {
+              primary: ["Lato", "serif"],
+              mollie: ["Mollie Glaston", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <!-- remix icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/slick.css" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="bg-green-light-02 overflow-x-hidden font-primary">
+    <div
+      class="bg-[#F7E6D9] hidden md:block shap absolute top-0 left-0 h-[550px] w-[400px] z-[50]"
+    ></div>
+    <!-- ===============================header section============================================ -->
+    <header id="header" class="text-primary w-full z-50 bg-white shadow-md">
+      <nav
+        class="w-full max-w-[1320px] mx-auto py-4 px-4 flex justify-between items-center"
+      >
+        <!-- Logo -->
+        <div class="text-xl font-bold">
+          <a href="logo">
+            <img src="./images/Glowave.png" alt="Glowave Logo" class="h-8" />
+          </a>
+        </div>
+
+        <!-- Hamburger Icon -->
+        <button
+          id="menu-toggle"
+          class="block md:hidden text-3xl text-gray-700 focus:outline-none"
+        >
+          <i class="ri-menu-line"></i>
+        </button>
+
+        <!-- Menu Items -->
+        <div
+          id="menu"
+          class="hidden md:flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 text-lg font-primary font-normal text-black relative"
+        >
+          <div class="relative group">
+            <a href="#services" class="hover:text-primary transition">About</a>
+            <div
+              class="absolute w-28 rounded-[50%] h-12 top-[30%] translate-x-[-50%] left-[50%] translate-y-[-50%] -rotate-12 mt-2 hidden border-2 bg-transparent border-[#657E68] shadow-md group-hover:block"
+            ></div>
+          </div>
+
+          <div class="relative group">
+            <a href="#services" class="hover:text-primary transition"
+              >Product</a
+            >
+            <div
+              class="absolute w-28 rounded-[50%] h-12 top-[30%] translate-x-[-50%] left-[50%] translate-y-[-50%] -rotate-12 mt-2 hidden border-2 bg-transparent border-[#657E68] shadow-md group-hover:block"
+            ></div>
+          </div>
+
+          <div class="relative group">
+            <a href="#services" class="hover:text-primary transition"
+              >Contact</a
+            >
+            <div
+              class="absolute w-28 rounded-[50%] h-12 top-[30%] translate-x-[-50%] left-[50%] translate-y-[-50%] -rotate-12 mt-2 hidden border-2 bg-transparent border-[#657E68] shadow-md group-hover:block"
+            ></div>
+          </div>
+
+          <div class="relative group">
+            <a href="#services" class="hover:text-primary transition"
+              >Skincare</a
+            >
+            <div
+              class="absolute w-28 rounded-[50%] h-12 top-[30%] translate-x-[-50%] left-[50%] translate-y-[-50%] -rotate-12 mt-2 hidden border-2 bg-transparent border-[#657E68] shadow-md group-hover:block"
+            ></div>
+          </div>
+        </div>
+
+        <!--=========================== Icons and Dropdown========================== -->
+        <div class="hidden md:flex items-center gap-4">
+          <a href=""><i class="ri-search-line text-[#525252] text-2xl"></i></a>
+          <a href=""
+            ><i class="ri-shopping-bag-4-line text-[#525252] text-2xl"></i
+          ></a>
+          <select
+            id="options"
+            name="options"
+            class="block py-2 text-gray-700 bg-transparent border-none focus:outline-none"
+          >
+            <option value="1">EN</option>
+            <option value="2">BN</option>
+          </select>
+        </div>
+      </nav>
+
+      <!--========================== Mobile Menu======================== -->
+      <div
+        id="mobile-menu"
+        class="absolute top-20 z-[9999] left-0 w-full bg-white shadow-md hidden flex-row py-4 px-6 md:hidden"
+      >
+        <ul>
+          <li class="text-base font-normal text-black py-2">About</li>
+          <li class="text-base font-normal text-black py-2">product</li>
+          <li class="text-base font-normal text-black py-2">Contact</li>
+          <li class="text-base font-normal text-black py-2">Contact</li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- =============Banner Section Start====================== -->
+    <section class="relative pb-16 overflow-hidden">
+      <div class="max-w-[1320px] mx-auto px-4 sm:px-6 md:px-0">
+        <div class="md:flex justify-between relative">
+          <div class="pt-12 md:pt-[108px] w-full md:w-[648px] z-[60]">
+            <h2
+              class="font-mollie text-[30px] sm:text-[48px] md:text-[72px] text-[#262626] font-normal relative"
+            >
+              Bring Out Your Skin's Natural Glow
+              <div class="absolute -bottom-2 md:bottom-4 right-2 md:right-14">
+                <img
+                  src="/images/bannerShap.png"
+                  class="w-[150px] h-[80px] md:w-auto md:h-auto"
+                  alt=""
+                />
+              </div>
+            </h2>
+            <p
+              class="font-primary text-base sm:text-lg md:text-xl font-normal text-[#6F6F6F] pt-4"
+            >
+              Discover the beauty of healthy, radiant skin with our carefully
+              crafted skincare solutions.
+            </p>
+            <div class="flex flex-wrap gap-8 mt-8 md:mt-12">
+              <div class="border-r-0 md:border-r-2 md:pr-9">
+                <span
+                  class="inline-block text-4xl sm:text-5xl text-[#164D47] font-mollie font-normal"
+                  >100%</span
+                >
+                <h3
+                  class="font-primary text-lg sm:text-xl font-normal text-black"
+                >
+                  Organic Product
+                </h3>
+              </div>
+              <div class="border-r-0 md:border-r-2 md:pr-9 pl-0 md:pl-9">
+                <span
+                  class="inline-block text-4xl sm:text-5xl text-[#164D47] font-mollie font-normal"
+                  >135+</span
+                >
+                <h3
+                  class="font-primary text-lg sm:text-xl font-normal text-black"
+                >
+                  Premium Products
+                </h3>
+              </div>
+              <div class="pl-0 md:pl-9">
+                <span
+                  class="inline-block text-4xl sm:text-5xl text-[#164D47] font-mollie font-normal"
+                  >4K+</span
+                >
+                <h3
+                  class="font-primary text-lg sm:text-xl font-normal text-black"
+                >
+                  Reviews
+                </h3>
+              </div>
+            </div>
+            <div class="pt-8 md:pt-[72px] flex flex-wrap gap-4">
+              <button
+                class="hover:text-white text-black hover:border-none transition duration-300 py-3 px-5 md:py-4 md:px-6 font-primary text-base sm:text-xl font-normal rounded-[50px] bg-transparent hover:bg-[#45726C] border-[1px] border-black"
+              >
+                Shop Now
+              </button>
+              <button
+                class="hover:text-white text-black hover:border-none transition duration-300 py-3 px-5 md:py-4 md:px-6 font-primary text-base sm:text-xl font-normal rounded-[50px] bg-transparent hover:bg-[#45726C] border-[1px] border-black"
+              >
+                <span><i class="ri-play-line text-lg sm:text-2xl"></i></span>
+                How To Use
+              </button>
+            </div>
+          </div>
+          <div class="mt-12 md:mt-0">
+            <img
+              src="/images/banner.png"
+              class="relative md:absolute md:top-20 md:-right-24 mx-auto md:mx-0"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="text-center pt-12 md:pt-32">
+          <img src="/images/arrow.png" class="m-auto" alt="" />
+          <p class="font-mollie font-normal text-lg sm:text-xl pt-3">Explore</p>
+        </div>
+      </div>
+
+      <div
+        class="bg-[#F9F1CE] hidden md:block shap absolute bottom-0 right-0 h-[200px] md:h-[400px] w-[300px] md:w-[500px] z-[80]"
+      ></div>
+    </section>
+
+    <!-- =============Banner Section End====================== -->
+
+    <!-- =============Category Section Start====================== -->
+    <section class="py-[100px]">
+      <div class="max-w-[1320px] mx-auto px-4">
+        <div class="pb-16">
+          <h2
+            class="text-center text-xl md:text-2xl font-normal font-primary text-black"
+          >
+            Product Category
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-x-[20px] gap-y-16">
+          <!-- First Row Items -->
+          <div class="text-center md:text-left">
+            <div class="relative">
+              <p class="text-[48px] md:text-[72px] font-normal font-mollie">
+                Cleansers
+              </p>
+              <sup
+                class="absolute top-2 md:top-8 right-24 text-[24px] md:text-[32px] font-normal font-mollie"
+                >10</sup
+              >
+            </div>
+          </div>
+          <div class="relative text-center md:text-left">
+            <p class="text-[48px] md:text-[72px] font-normal font-mollie">
+              Moisturizers
+            </p>
+            <sup
+              class="absolute top-2 md:top-8 right-2 text-[24px] md:text-[32px] font-normal font-mollie"
+              >16</sup
+            >
+          </div>
+          <div class="relative text-center md:text-left">
+            <p class="text-[48px] md:text-[72px] font-normal font-mollie">
+              Masks
+            </p>
+            <sup
+              class="absolute top-2 md:top-8 right-28 text-[24px] md:text-[32px] font-normal font-mollie"
+              >23</sup
+            >
+          </div>
+
+          <div class="relative text-center col-span-1 mx-auto md:col-span-1">
+            <div class="relative">
+              <p
+                class="text-[48px] md:text-[72px] font-normal font-mollie text-[#45726C]"
+              >
+                Sunscreens
+              </p>
+              <sup
+                class="absolute top-2 md:top-8 -right-10 text-[24px] md:text-[32px] font-normal font-mollie"
+                >23</sup
+              >
+              <img
+                src="images/categoryShap.png"
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                alt="Sunscreens Background"
+              />
+            </div>
+          </div>
+          <div class="relative text-center col-span-1 mx-auto md:col-span-1">
+            <p class="text-[48px] md:text-[72px] font-normal font-mollie">
+              Serums
+            </p>
+            <sup
+              class="absolute top-2 md:top-8 -right-8 text-[24px] md:text-[32px] font-normal font-mollie"
+              >12</sup
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============Category Section End=========================-->
+    <!-- ============= New Arrivals Section Start====================== -->
+    <section class="py-12 md:py-[100px] bg-[#FCFAF0]">
+      <div class="max-w-[1320px] mx-auto px-4 sm:px-6 md:px-0">
+        <h1
+          class="text-3xl sm:text-5xl md:text-[72px] font-normal font-mollie leading-none pb-8 md:pb-16 text-center md:text-left"
+        >
+          New Arrivals
+        </h1>
+        <div>
+          <div>
+            <div class="slick_item_expore_gallery flex flex-wrap">
+              <div class="text-center md:text-left">
+                <img
+                  src="/images/allproduct1.png"
+                  alt=""
+                  class="mx-auto md:mx-0"
+                />
+                <span
+                  class="inline-block text-[#1C1C1C] text-sm font-primary leading-[120%] pt-2"
+                  >Moisturizers</span
+                >
+                <p
+                  class="text-[#1C1C1C] text-lg sm:text-xl md:text-2xl font-primary leading-[120%] pt-1 pb-2"
+                >
+                  Detox Charcoal Mask
+                </p>
+                <span
+                  class="inline-block text-[#657E68] font-primary font-bold text-lg sm:text-xl md:text-2xl leading-[120%]"
+                  >$32</span
+                >
+              </div>
+              <div class="text-center md:text-left">
+                <img
+                  src="/images/allproduct7.png"
+                  alt=""
+                  class="mx-auto md:mx-0"
+                />
+                <span
+                  class="inline-block text-[#1C1C1C] text-sm font-primary leading-[120%] pt-2"
+                  >Moisturizers</span
+                >
+                <p
+                  class="text-[#1C1C1C] text-lg sm:text-xl md:text-2xl font-primary leading-[120%] pt-1 pb-2"
+                >
+                  Detox Charcoal Mask
+                </p>
+                <span
+                  class="inline-block text-[#657E68] font-primary font-bold text-lg sm:text-xl md:text-2xl leading-[120%]"
+                  >$32</span
+                >
+              </div>
+              <div class="text-center md:text-left">
+                <img
+                  src="/images/allproduct8.png"
+                  alt=""
+                  class="mx-auto md:mx-0"
+                />
+                <span
+                  class="inline-block text-[#1C1C1C] text-sm font-primary leading-[120%] pt-2"
+                  >Moisturizers</span
+                >
+                <p
+                  class="text-[#1C1C1C] text-lg sm:text-xl md:text-2xl font-primary leading-[120%] pt-1 pb-2"
+                >
+                  Detox Charcoal Mask
+                </p>
+                <span
+                  class="inline-block text-[#657E68] font-primary font-bold text-lg sm:text-xl md:text-2xl leading-[120%]"
+                  >$32</span
+                >
+              </div>
+              <div class="text-center md:text-left">
+                <img
+                  src="/images/allproduct2.png"
+                  alt=""
+                  class="mx-auto md:mx-0"
+                />
+                <span
+                  class="inline-block text-[#1C1C1C] text-sm font-primary leading-[120%] pt-2"
+                  >Moisturizers</span
+                >
+                <p
+                  class="text-[#1C1C1C] text-lg sm:text-xl md:text-2xl font-primary leading-[120%] pt-1 pb-2"
+                >
+                  Detox Charcoal Mask
+                </p>
+                <span
+                  class="inline-block text-[#657E68] font-primary font-bold text-lg sm:text-xl md:text-2xl leading-[120%]"
+                  >$32</span
+                >
+              </div>
+              <div class="text-center md:text-left">
+                <img
+                  src="/images/allproduct4.png"
+                  alt=""
+                  class="mx-auto md:mx-0"
+                />
+                <span
+                  class="inline-block text-[#1C1C1C] text-sm font-primary leading-[120%] pt-2"
+                  >Moisturizers</span
+                >
+                <p
+                  class="text-[#1C1C1C] text-lg sm:text-xl md:text-2xl font-primary leading-[120%] pt-1 pb-2"
+                >
+                  Detox Charcoal Mask
+                </p>
+                <span
+                  class="inline-block text-[#657E68] font-primary font-bold text-lg sm:text-xl md:text-2xl leading-[120%]"
+                  >$32</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ============= New Arrivals Section End====================== -->
+
+    <section class="py-[50px] md:py-[100px]">
+      <div class="w-full max-w-[1320px] mx-auto px-4 md:px-0">
+        <div>
+          <h2
+            class="text-center text-[24px] md:text-[72px] font-normal font-mollie text-black pb-8 md:pb-16"
+          >
+            Our Story
+          </h2>
+          <div class="relative">
+            <div
+              class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 max-w-[300px] md:max-w-none"
+            >
+              <img src="/images/story.png" class="w-full h-auto" alt="" />
+            </div>
+            <p
+              class="text-[32px] md:text-[128px] text-center uppercase font-normal font-mollie text-[#7B7B7B]"
+            >
+              <span class="inline-block text-black">skincare shou</span>ld be
+              <span class="text-black inline-block">kind, both</span> to your
+              <span class="inline-block text-black">skin</span> and to the
+              environment.
+            </p>
+          </div>
+          <div
+            class="flex flex-col md:flex-row justify-center gap-4 pt-8 md:pt-16"
+          >
+            <button
+              class="hover:text-white text-black transition-all duration-300 py-3 px-5 md:py-4 md:px-6 font-primary text-sm md:text-xl font-normal rounded-[50px] bg-transparent hover:bg-[#45726C] border-[1px] border-black"
+            >
+              Learn More
+            </button>
+            <button
+              class="hover:text-white text-black transition-all duration-300 py-3 px-5 md:py-4 md:px-6 font-primary text-sm md:text-xl font-normal rounded-[50px] bg-transparent hover:bg-[#45726C] border-[1px] border-black"
+            >
+              See All Product
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============  Top Selling Product Section Start====================== -->
+    <section class="bg-gradient-to-b from-secondaryThree py-10">
+      <div class="max-w-[1320px] mx-auto px-4">
+        <div class="flex flex-wrap items-center justify-between pb-8 md:pb-16">
+          <h2
+            class="text-3xl md:text-5xl lg:text-[72px] font-normal font-mollie leading-none"
+          >
+            Top Selling Product
+          </h2>
+          <button
+            class="text-white hidden md:block py-3 px-5 md:py-4 md:px-6 font-primary text-lg md:text-xl font-normal rounded-[50px] bg-[#45726C]"
+          >
+            See All Product
+          </button>
+        </div>
+        <div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div>
+              <img
+                src="/images/allproduct1.png"
+                alt="Product 1"
+                class="w-full"
+              />
+              <span
+                class="inline-block text-[#1C1C1C] text-xs md:text-sm font-primary leading-[120%]"
+                >Moisturizers</span
+              >
+              <p
+                class="text-[#1C1C1C] text-lg md:text-2xl font-primary leading-[120%] pt-1 pb-2"
+              >
+                Detox Charcoal Mask
+              </p>
+              <span
+                class="inline-block text-[#657E68] font-primary font-bold text-lg md:text-2xl leading-[120%]"
+                >$32</span
+              >
+            </div>
+            <div>
+              <img
+                src="/images/allproduct2.png"
+                alt="Product 2"
+                class="w-full"
+              />
+              <span
+                class="inline-block text-[#1C1C1C] text-xs md:text-sm font-primary leading-[120%]"
+                >Moisturizers</span
+              >
+              <p
+                class="text-[#1C1C1C] text-lg md:text-2xl font-primary leading-[120%] pt-1 pb-2"
+              >
+                Detox Charcoal Mask
+              </p>
+              <span
+                class="inline-block text-[#657E68] font-primary font-bold text-lg md:text-2xl leading-[120%]"
+                >$32</span
+              >
+            </div>
+            <div>
+              <img
+                src="/images/allproduct2.png"
+                alt="Product 2"
+                class="w-full"
+              />
+              <span
+                class="inline-block text-[#1C1C1C] text-xs md:text-sm font-primary leading-[120%]"
+                >Moisturizers</span
+              >
+              <p
+                class="text-[#1C1C1C] text-lg md:text-2xl font-primary leading-[120%] pt-1 pb-2"
+              >
+                Detox Charcoal Mask
+              </p>
+              <span
+                class="inline-block text-[#657E68] font-primary font-bold text-lg md:text-2xl leading-[120%]"
+                >$32</span
+              >
+            </div>
+            <div>
+              <img
+                src="/images/allproduct5.png"
+                alt="Product 2"
+                class="w-full"
+              />
+              <span
+                class="inline-block text-[#1C1C1C] text-xs md:text-sm font-primary leading-[120%]"
+                >Moisturizers</span
+              >
+              <p
+                class="text-[#1C1C1C] text-lg md:text-2xl font-primary leading-[120%] pt-1 pb-2"
+              >
+                Detox Charcoal Mask
+              </p>
+              <span
+                class="inline-block text-[#657E68] font-primary font-bold text-lg md:text-2xl leading-[120%]"
+                >$32</span
+              >
+            </div>
+            <div class="pt-5">
+              <img
+                src="/images/allproduct5.png"
+                alt="Product 2"
+                class="w-full"
+              />
+              <span
+                class="inline-block text-[#1C1C1C] text-xs md:text-sm font-primary leading-[120%]"
+                >Moisturizers</span
+              >
+              <p
+                class="text-[#1C1C1C] text-lg md:text-2xl font-primary leading-[120%] pt-1 pb-2"
+              >
+                Detox Charcoal Mask
+              </p>
+              <span
+                class="inline-block text-[#657E68] font-primary font-bold text-lg md:text-2xl leading-[120%]"
+                >$32</span
+              >
+            </div>
+            <div class="pt-5">
+              <img
+                src="/images/allproduct6.png"
+                alt="Product 2"
+                class="w-full"
+              />
+              <span
+                class="inline-block text-[#1C1C1C] text-xs md:text-sm font-primary leading-[120%]"
+                >Moisturizers</span
+              >
+              <p
+                class="text-[#1C1C1C] text-lg md:text-2xl font-primary leading-[120%] pt-1 pb-2"
+              >
+                Detox Charcoal Mask
+              </p>
+              <span
+                class="inline-block text-[#657E68] font-primary font-bold text-lg md:text-2xl leading-[120%]"
+                >$32</span
+              >
+            </div>
+            <div class="pt-5">
+              <img
+                src="/images/allproduct7.png"
+                alt="Product 2"
+                class="w-full"
+              />
+              <span
+                class="inline-block text-[#1C1C1C] text-xs md:text-sm font-primary leading-[120%]"
+                >Moisturizers</span
+              >
+              <p
+                class="text-[#1C1C1C] text-lg md:text-2xl font-primary leading-[120%] pt-1 pb-2"
+              >
+                Detox Charcoal Mask
+              </p>
+              <span
+                class="inline-block text-[#657E68] font-primary font-bold text-lg md:text-2xl leading-[120%]"
+                >$32</span
+              >
+            </div>
+            <div class="pt-5">
+              <img
+                src="/images/allproduct8.png"
+                alt="Product 2"
+                class="w-full"
+              />
+              <span
+                class="inline-block text-[#1C1C1C] text-xs md:text-sm font-primary leading-[120%]"
+                >Moisturizers</span
+              >
+              <p
+                class="text-[#1C1C1C] text-lg md:text-2xl font-primary leading-[120%] pt-1 pb-2"
+              >
+                Detox Charcoal Mask
+              </p>
+              <span
+                class="inline-block text-[#657E68] font-primary font-bold text-lg md:text-2xl leading-[120%]"
+                >$32</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =============  Top Selling Product Section End====================== -->
+
+    <!-- =============  We Protect Your Skin Section Start====================== -->
+    <section class="md:py-[100px] py-10">
+      <div class="max-w-[1320px] mx-auto px-4">
+        <h1
+          class="text-3xl md:text-5xl lg:text-[72px] font-normal font-mollie leading-none pb-8 md:pb-16"
+        >
+          We Protect Your Skin
+        </h1>
+        <div>
+          <div>
+            <div class="slick_item flex flex-wrap gap-6">
+              <div class="w-full lg:w-[760px] pr-0 lg:pr-6">
+                <div class="flex flex-wrap lg:flex-nowrap">
+                  <div
+                    class="w-full lg:w-auto p-6 md:p-8 bg-gradient-to-r from-secondaryTwo rounded-xl"
+                  >
+                    <div class="relative">
+                      <h3
+                        class="text-2xl md:text-3xl lg:text-[40px] font-normal font-mollie"
+                      >
+                        How to Build a Skincare Routine
+                      </h3>
+                      <p
+                        class="font-primary text-sm md:text-base leading-[120%] font-normal pt-2"
+                      >
+                        Step-by-step guide to creating the perfect skincare
+                        regimen.
+                      </p>
+                      <div>
+                        <img
+                          src="images/productTextShap.png"
+                          class="absolute top-0 right-0 w-16 md:w-auto"
+                          alt=""
+                        />
+                      </div>
+                      <button
+                        class="text-[#313131] transition mt-8 md:mt-[100px] duration-700 py-3 px-5 md:py-4 md:px-6 font-primary text-base md:text-xl font-normal rounded-[50px] bg-transparent hover:bg-transparent border-[1px] border-[#313131]"
+                      >
+                        Discover Now
+                      </button>
+                    </div>
+                  </div>
+                  <div class="w-full lg:w-[326px] mt-4 lg:mt-0">
+                    <img
+                      src="/images/product1.png"
+                      class="rounded-xl lg:rounded-r-2xl h-full"
+                      alt="Product"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="w-full lg:w-[760px] pr-0 lg:pr-6">
+                <div class="flex flex-wrap lg:flex-nowrap">
+                  <div
+                    class="w-full lg:w-auto p-6 md:p-8 bg-gradient-to-r from-secondaryTwo rounded-xl"
+                  >
+                    <div class="relative">
+                      <h3
+                        class="text-2xl md:text-3xl lg:text-[40px] font-normal font-mollie"
+                      >
+                        How to Build a Skincare Routine
+                      </h3>
+                      <p
+                        class="font-primary text-sm md:text-base leading-[120%] font-normal pt-2"
+                      >
+                        Step-by-step guide to creating the perfect skincare
+                        regimen.
+                      </p>
+                      <div>
+                        <img
+                          src="images/productTextShap.png"
+                          class="absolute top-0 right-0 w-16 md:w-auto"
+                          alt=""
+                        />
+                      </div>
+                      <button
+                        class="text-[#313131] transition mt-8 md:mt-[100px] duration-700 py-3 px-5 md:py-4 md:px-6 font-primary text-base md:text-xl font-normal rounded-[50px] bg-transparent hover:bg-transparent border-[1px] border-[#313131]"
+                      >
+                        Discover Now
+                      </button>
+                    </div>
+                  </div>
+                  <div class="w-full lg:w-[326px] mt-4 lg:mt-0">
+                    <img
+                      src="/images/product1.png"
+                      class="rounded-xl lg:rounded-r-2xl h-full"
+                      alt="Product"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="w-full lg:w-[760px] pr-0 lg:pr-6">
+                <div class="flex flex-wrap lg:flex-nowrap">
+                  <div
+                    class="w-full lg:w-auto p-6 md:p-8 bg-gradient-to-r from-secondaryTwo rounded-xl"
+                  >
+                    <div class="relative">
+                      <h3
+                        class="text-2xl md:text-3xl lg:text-[40px] font-normal font-mollie"
+                      >
+                        How to Build a Skincare Routine
+                      </h3>
+                      <p
+                        class="font-primary text-sm md:text-base leading-[120%] font-normal pt-2"
+                      >
+                        Step-by-step guide to creating the perfect skincare
+                        regimen.
+                      </p>
+                      <div>
+                        <img
+                          src="images/productTextShap.png"
+                          class="absolute top-0 right-0 w-16 md:w-auto"
+                          alt=""
+                        />
+                      </div>
+                      <button
+                        class="text-[#313131] transition mt-8 md:mt-[100px] duration-700 py-3 px-5 md:py-4 md:px-6 font-primary text-base md:text-xl font-normal rounded-[50px] bg-transparent hover:bg-transparent border-[1px] border-[#313131]"
+                      >
+                        Discover Now
+                      </button>
+                    </div>
+                  </div>
+                  <div class="w-full lg:w-[326px] mt-4 lg:mt-0">
+                    <img
+                      src="/images/product1.png"
+                      class="rounded-xl lg:rounded-r-2xl h-full"
+                      alt="Product"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-center pt-10 md:pt-16">
+              <button
+                class="text-white py-3 px-5 md:py-4 md:px-6 font-primary text-base md:text-xl font-normal rounded-[50px] bg-[#45726C]"
+              >
+                See All Product
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =============  We Protect Your Skin Section End====================== -->
+    <!-- =============  Why Choose Our Product Section Start====================== -->
+    <section class="py-10 md:py-[100px] bg-[#FDFCF5]/50">
+      <div class="max-w-[1320px] mx-auto px-4">
+        <h2
+          class="text-center text-3xl md:text-5xl lg:text-[72px] font-normal font-mollie text-black pb-8 md:pb-16"
+        >
+          Why Choose Our Product
+        </h2>
+        <div
+          class="flex flex-wrap lg:flex-nowrap justify-center lg:justify-between gap-6 lg:gap-[136px] items-center"
+        >
+          <div
+            class="border border-[#45726C]/50 bg-white rounded-3xl py-6 md:py-10 px-6 md:px-10"
+          >
+            <!--==================== Item 1 =========================-->
+            <div
+              class="flex md:flex-nowrap items-center border-b border-b-[#45726C]/50 pb-6 md:pb-9 gap-4 md:gap-[35px]"
+            >
+              <div class="w-16 h-16 md:!w-[72px] md:!h-[72px]">
+                <img src="/images/icon1.png" class="w-full" alt="Icon 1" />
+              </div>
+              <div class="w-full md:w-[387px]">
+                <h4 class="text-xl md:text-2xl font-normal">
+                  1. Clean Ingredients
+                </h4>
+                <p class="text-sm md:text-base font-normal">
+                  We use only the safest, most effective ingredients. No
+                  parabens, sulfates, or synthetic fragrances.
+                </p>
+              </div>
+            </div>
+            <!-- ====================Item 2 ========================-->
+            <div
+              class="flex md:flex-nowrap items-center border-b border-b-[#45726C]/50 pb-6 md:pb-9 gap-4 md:gap-[35px] mt-6"
+            >
+              <div class="w-full md:w-[387px]">
+                <h4 class="text-xl md:text-2xl font-normal">2. Cruelty-Free</h4>
+                <p class="text-sm md:text-base font-normal">
+                  No testing on animals, ever. We are certified cruelty-free and
+                  stand against animal cruelty in all its forms.
+                </p>
+              </div>
+              <div class="w-16 h-16 md:!w-[72px] md:!h-[72px]">
+                <img src="/images/icon1.png" alt="Icon 2" />
+              </div>
+            </div>
+            <!-- ====================Item 3====================== -->
+            <div
+              class="flex md:flex-nowrap items-center border-b border-b-[#45726C]/50 pb-6 md:pb-9 gap-4 md:gap-[35px] mt-6"
+            >
+              <div class="w-16 h-16 md:!w-[72px] md:!h-[72px]">
+                <img src="/images/icon1.png" alt="Icon 3" />
+              </div>
+              <div class="w-full md:w-[387px]">
+                <h4 class="text-xl md:text-2xl font-normal">
+                  3. Eco-Friendly Packaging
+                </h4>
+                <p class="text-sm md:text-base font-normal">
+                  We use only the safest, most effective ingredients.
+                </p>
+              </div>
+            </div>
+            <!--================= Item 4=============== -->
+            <div
+              class="flex md:flex-nowrap items-center gap-4 md:gap-[35px] mt-6"
+            >
+              <div class="w-full md:w-[387px]">
+                <h4 class="text-xl md:text-2xl font-normal">
+                  4. Dermatologist Approved
+                </h4>
+                <p class="text-sm md:text-base font-normal">
+                  We use only the safest, most effective ingredients.
+                </p>
+              </div>
+              <div class="w-16 h-16 md:!w-[72px] md:!h-[72px]">
+                <img src="/images/icon1.png" alt="Icon 4" />
+              </div>
+            </div>
+          </div>
+          <div class="w-full lg:w-auto">
+            <img
+              src="/images/choose.png"
+              class="w-full rounded-3xl"
+              alt="Why Choose Us"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =============  Why Choose Our Product Section End====================== -->
+
+    <!-- =============  Testimonials Section Start====================== -->
+    <section class="py-10 md:py-[100px]">
+      <div class="max-w-[1320px] mx-auto px-4">
+        <div class="text-center">
+          <h4
+            class="text-xl md:text-2xl font-normal font-primary leading-[120%]"
+          >
+            Testimonials
+          </h4>
+          <h2
+            class="text-3xl md:text-5xl lg:text-[72px] font-normal font-mollie leading-[120%] pt-2 md:pt-4"
+          >
+            What People Are Saying
+          </h2>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-8 md:pt-16"
+        >
+          <!-- Testimonial 1 -->
+          <div class="text-center">
+            <img
+              src="/images/test1.png"
+              class="m-auto pb-4 w-24 md:w-auto"
+              alt="Testimonial 1"
+            />
+            <div class="flex justify-center gap-1">
+              <i class="ri-star-s-fill text-[#FEC84B]"></i>
+              <i class="ri-star-s-fill text-[#FEC84B]"></i>
+              <i class="ri-star-s-fill text-[#FEC84B]"></i>
+              <i class="ri-star-s-fill text-[#FEC84B]"></i>
+              <i class="ri-star-s-fill text-[#FEC84B]"></i>
+            </div>
+            <p
+              class="font-primary font-normal text-base md:text-lg leading-[150%] pt-6 pb-4"
+            >
+              After using this serum for just a week, I noticed a significant
+              improvement in my skin’s texture and radiance. As a dermatologist,
+              I highly recommend it.
+            </p>
+            <h3
+              class="font-primary font-normal text-lg md:text-xl leading-[120%] pb-1"
+            >
+              Emily Thompson
+            </h3>
+            <span
+              class="inline-block text-[#565656] font-primary font-normal text-sm md:text-base leading-[120%]"
+            >
+              Dermatologist
+            </span>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="text-center">
+            <img
+              src="/images/test1.png"
+              class="m-auto pb-4 w-24 md:w-auto"
+              alt="Testimonial 2"
+            />
+            <div class="flex justify-center gap-1">
+              <i class="ri-star-s-fill text-[#FEC84B]"></i>
+              <i class="ri-star-s-fill text-[#FEC84B]"></i>
+              <i class="ri-star-s-fill text-[#FEC84B]"></i>
+              <i class="ri-star-s-fill text-[#FEC84B]"></i>
+              <i class="ri-star-s-fill text-[#FEC84B]"></i>
+            </div>
+            <p
+              class="font-primary font-normal text-base md:text-lg leading-[150%] pt-6 pb-4"
+            >
+              This moisturizer is a game changer! My skin feels soft and
+              hydrated all day. I’ve incorporated it into my daily routine and
+              can’t imagine living without it!
+            </p>
+            <h3
+              class="font-primary font-normal text-lg md:text-xl leading-[120%] pb-1"
+            >
+              Rachel Nguyen
+            </h3>
+            <span
+              class="inline-block text-[#565656] font-primary font-normal text-sm md:text-base leading-[120%]"
+            >
+              Beauty Influencer
+            </span>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="text-center">
+            <img
+              src="/images/test1.png"
+              class="m-auto pb-4 w-24 md:w-auto"
+              alt="Testimonial 3"
+            />
+            <div class="flex justify-center gap-1">
+              <i class="ri-star-s-fill text-[#FEC84B]"></i>
+              <i class="ri-star-s-fill text-[#FEC84B]"></i>
+              <i class="ri-star-s-fill text-[#FEC84B]"></i>
+              <i class="ri-star-s-fill text-[#FEC84B]"></i>
+              <i class="ri-star-s-fill text-[#FEC84B]"></i>
+            </div>
+            <p
+              class="font-primary font-normal text-base md:text-lg leading-[150%] pt-6 pb-4"
+            >
+              I’ve tried countless products over the years, but nothing compares
+              to this! My skin has never looked so clear and vibrant!
+            </p>
+            <h3
+              class="font-primary font-normal text-lg md:text-xl leading-[120%] pb-1"
+            >
+              Carlos Diaz
+            </h3>
+            <span
+              class="inline-block text-[#565656] font-primary font-normal text-sm md:text-base leading-[120%]"
+            >
+              Skincare Enthusiast
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =============  Testimonials Section End====================== -->
+    <section class="py-10 md:py-[100px]">
+      <div class="max-w-[1320px] mx-auto px-4">
+        <div class="bg-[#45726C] rounded-2xl overflow-hidden">
+          <div class="grid grid-cols-1 md:grid-cols-2">
+            <!-- Image Section -->
+            <div class="md:rounded-tr-xl">
+              <img
+                src="images/offer1.png"
+                class="w-full h-auto md:rounded-l-2xl"
+                alt="Promotional Offer"
+              />
+            </div>
+            <!-- Text and Overlay Section -->
+            <div class="relative bg-[#45726C] rounded-2xl text-white">
+              <div class="absolute top-4 right-0 hidden md:block">
+                <img src="/images/offerShap2.png" alt="Decorative Shape" />
+              </div>
+              <div class="p-8 md:pt-[94px] md:pl-12 md:w-[450px]">
+                <span
+                  class="block text-5xl md:text-[72px] font-mollie font-normal"
+                >
+                  50% OFF
+                </span>
+                <p
+                  class="font-primary text-2xl md:text-5xl leading-[120%] font-normal mt-4"
+                >
+                  Start exploring our range of products
+                </p>
+                <button
+                  class="mt-8 md:mt-[100px] py-4 px-6 font-primary text-lg md:text-xl font-normal rounded-full border border-white bg-transparent hover:bg-white hover:text-[#45726C] transition"
+                >
+                  Explore All
+                </button>
+              </div>
+              <div class="absolute bottom-0 right-0 hidden md:block">
+                <img src="/images/offerShap.png" alt="Decorative Shape" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-10 md:py-[100px] bg-[#FCFAF0]">
+      <div class="max-w-[1320px] mx-auto px-4">
+        <h1
+          class="text-4xl md:text-[72px] font-normal font-mollie leading-none pb-8 md:pb-16"
+        >
+          Explore Gallery
+        </h1>
+        <div>
+          <div>
+            <div class="slick_item_expore_gallery flex flex-wrap">
+              <div class="p-2 md:p-3 w-1/2 md:w-3/12">
+                <img
+                  src="/images/gallary1.png"
+                  class="w-full rounded-lg"
+                  alt="Gallery Image 1"
+                />
+              </div>
+              <div class="p-2 md:p-3 w-1/2 md:w-3/12">
+                <img
+                  src="/images/gallary1.png"
+                  class="w-full rounded-lg"
+                  alt="Gallery Image 2"
+                />
+              </div>
+              <div class="p-2 md:p-3 w-1/2 md:w-3/12">
+                <img
+                  src="/images/gallary1.png"
+                  class="w-full rounded-lg"
+                  alt="Gallery Image 3"
+                />
+              </div>
+              <div class="p-2 md:p-3 w-1/2 md:w-3/12">
+                <img
+                  src="/images/gallary1.png"
+                  class="w-full rounded-lg"
+                  alt="Gallery Image 4"
+                />
+              </div>
+              <div class="p-2 md:p-3 w-1/2 md:w-3/12">
+                <img
+                  src="/images/gallary1.png"
+                  class="w-full rounded-lg"
+                  alt="Gallery Image 5"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="w-full px-4 md:w-[1320px] mx-auto my-[50px] md:my-[100px]">
+        <div
+          class="py-[100px] md:py-[200px] rounded-3xl bg-no-repeat bg-cover"
+          style="background-image: url(/images/news.png)"
+        >
+          <div class="text-center w-full md:w-[590px] mx-auto px-4 md:px-0">
+            <h2
+              class="font-normal text-[40px] md:text-[72px] font-mollie leading-none text-white"
+            >
+              Join Our Newsletter
+            </h2>
+            <p
+              class="font-primary text-base md:text-xl font-normal leading-[150%] text-white pt-4"
+            >
+              Sign up for our newsletter to receive exclusive access to the
+              latest skincare tips, product launches, and special promotions.
+            </p>
+            <div class="relative mt-8 md:mt-16">
+              <input
+                type="text"
+                placeholder="Enter Your email here"
+                class="w-full rounded-[50px] py-4 md:py-7 px-6 md:px-7 outline-none text-sm md:text-base"
+              />
+              <button
+                class="text-white bg-[#45726C] py-3 md:py-4 px-5 md:px-6 font-primary text-sm md:text-xl font-normal rounded-[50px] border-[1px] absolute top-1/2 -translate-y-1/2 right-3"
+              >
+                See All Product
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#FCFAF0] pt-[100px] px-3 md:px-0">
+      <div class="w-[1320px] mx-auto">
+        <div>
+          <div class="grid grid-cols-1 md:grid-cols-4 md:gap-36">
+            <div class="">
+              <img src="./images/Glowave.png" alt="" />
+              <p
+                class="w-[295px] text-[#000000] font-primary font-normal text-lg leading-[150%] pt-[40px]"
+              >
+                Discover the beauty of healthy, radiant skin with our carefully
+                crafted skincare solutions
+              </p>
+              <div class="flex gap-x-3 mt-9">
+                <div
+                  class="w-[44px] h-[44px] bg-transparent hover:bg-[#45726C] border-[#45726C] text-[#45726C] transition duration-700 hover:text-white border rounded-full flex items-center justify-center"
+                >
+                  <a href="">
+                    <i class="ri-facebook-circle-fill text-2xl"></i
+                  ></a>
+                </div>
+                <div
+                  class="w-[44px] h-[44px] bg-transparent hover:bg-[#45726C] border-[#45726C] text-[#45726C] transition duration-700 hover:text-white border rounded-full flex items-center justify-center"
+                >
+                  <a href="">
+                    <i class="ri-twitter-x-line text-2xl"></i>
+                  </a>
+                </div>
+                <div
+                  class="w-[44px] h-[44px] bg-transparent hover:bg-[#45726C] border-[#45726C] text-[#45726C] transition duration-700 hover:text-white border rounded-full flex items-center justify-center"
+                >
+                  <a href="">
+                    <i class="ri-instagram-line text-2"></i>
+                  </a>
+                </div>
+                <div
+                  class="w-[44px] h-[44px] bg-transparent hover:bg-[#45726C] border-[#45726C] text-[#45726C] transition duration-700 hover:text-white border rounded-full flex items-center justify-center"
+                >
+                  <a href=""><i class="ri-pinterest-line text-2xl"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="md:ml-20">
+              <h3
+                class="pb-6 text-2xl font-primary text-black pt-3 md:pt-0 underline md:no-underline"
+              >
+                Quick Links
+              </h3>
+              <ul>
+                <li
+                  class="pb-4 cursor-pointer font-primary text-lg font-normal leading-[120%]"
+                >
+                  Shop
+                </li>
+                <li
+                  class="pb-4 cursor-pointer font-primary text-lg font-normal leading-[120%]"
+                >
+                  About Us
+                </li>
+                <li
+                  class="pb-4 cursor-pointer font-primary text-lg font-normal leading-[120%]"
+                >
+                  Skincare Blog
+                </li>
+                <li
+                  class="pb-4 cursor-pointer font-primary text-lg font-normal leading-[120%]"
+                >
+                  FAQs
+                </li>
+                <li
+                  class="ccursor-pointer font-primary text-lg font-normal leading-[120%]"
+                >
+                  Shipping & Returns
+                </li>
+              </ul>
+            </div>
+            <div class="md:ml-10">
+              <h3
+                class="pb-6 text-2xl font-primary text-black pt-3 md:pt-0 underline md:no-underline"
+              >
+                Quick Links
+              </h3>
+              <ul>
+                <li class="pb-4 cursor-pointer">Shop</li>
+                <li class="pb-4 cursor-pointer">About Us</li>
+                <li class="pb-4 cursor-pointer">Skincare Blog</li>
+                <li class="pb-4 cursor-pointer">FAQs</li>
+                <li
+                  class="cursor-pointer font-primary text-lg font-normal leading-[120%]"
+                >
+                  Shipping & Returns
+                </li>
+              </ul>
+            </div>
+            <div class="md:ml-10">
+              <h3
+                class="pb-6 text-2xl font-primary text-black pt-3 md:pt-0 underline md:no-underline"
+              >
+                Quick Links
+              </h3>
+              <ul>
+                <li class="pb-4 cursor-pointer">Shop</li>
+                <li class="pb-4 cursor-pointer">About Us</li>
+                <li class="pb-4 cursor-pointer">Skincare Blog</li>
+                <li class="pb-4 cursor-pointer">FAQs</li>
+                <li
+                  class="cursor-pointer font-primary text-lg font-normal leading-[120%]"
+                >
+                  Shipping & Returns
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pt-[100px]">
+        <hr class="bg-[#45726C] h-[2px]" />
+      </div>
+      <div class="w-[1320px] mx-auto md:flex justify-between py-[25px]">
+        <div>
+          <h4 class="text-base font-primary text-[#262626]">
+            @Glowave 2025. All Rights Reserved
+          </h4>
+        </div>
+        <div>
+          <ul class="flex gap-3">
+            <li class="border-r pr-2 text-base text-[#262626 font-primary]">
+              Privacy Policy
+            </li>
+            <li class="border-r pr-2 text-base text-[#262626 font-primary]">
+              Terms of Use
+            </li>
+            <li class="border-r pr-2 text-base text-[#262626 font-primary]">
+              Sales and Refunds
+            </li>
+            <li class="">Legal</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!--==================== Back to Top Button======================= -->
+    <button
+      id="backToTop"
+      class="hidden fixed bottom-8 right-8 md:bottom-24 md:right-28 py-3 px-3 outline-none bg-[#45726C] text-white shadow-lg transition duration-300 hover:bg-[#356157] focus:outline-none focus:ring-[#356157] focus:ring-offset-2"
+      aria-label="Back to Top"
+      tabindex="0"
+    >
+      <img
+        src="./images/backtotop.png"
+        alt="Back to Top Icon"
+        class="w-[37px] h-[37px]"
+      />
+    </button>
+    <!--================== js script tags =============================-->
+    <script src="js/app.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/custom.js"></script>
+  </body>
+</html>

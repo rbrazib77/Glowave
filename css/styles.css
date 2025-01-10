@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "Mollie Glaston";
+  src: url("/fonts/Mollie Glaston.ttf") format("truetype");
+}
+
+.shap {
+  filter: blur(100px);
+}
+
+.prev,
+.next {
+  height: 56px;
+  width: 56px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: -90px;
+  transform: translateY(-50%);
+  z-index: 111;
+  border: 1px solid gray;
+  color: #9e9e9e;
+  transition: all 0.3s ease;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.prev {
+  right: 0;
+}
+
+.next {
+  right: 100px;
+}
+
+.prev:hover,
+.next:hover {
+  border-color: #9e9e9e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .prev,
+  .next {
+    top: -70px;
+    height: 48px;
+    width: 48px;
+    line-height: 42px;
+    font-size: 32px;
+  }
+
+  .next {
+    right: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .prev,
+  .next {
+    top: -75px;
+    height: 40px;
+    width: 40px;
+    line-height: 36px;
+    font-size: 28px;
+  }
+
+  .next {
+    right: 50px;
+  }
+}
+
+#backToTop {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+#backToTop.show {
+  opacity: 1;
+}
