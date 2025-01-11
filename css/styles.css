@@ -38,6 +38,22 @@
   border-color: #9e9e9e;
 }
 
+@media (max-width: 1024px) {
+  .prev,
+  .next {
+    top: -90px;
+    height: 40px;
+    width: 40px;
+    line-height: 36px;
+    font-size: 28px;
+    right: 20px;
+  }
+
+  .next {
+    right: 80px;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .prev,
@@ -47,14 +63,15 @@
     width: 48px;
     line-height: 42px;
     font-size: 32px;
+    right: 20px;
   }
 
   .next {
-    right: 60px;
+    right: 100px;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .prev,
   .next {
     top: -75px;
@@ -69,10 +86,28 @@
   }
 }
 
+@media (max-width: 480px) {
+  .prev,
+  .next {
+    top: -45px;
+    height: 40px;
+    width: 40px;
+    line-height: 36px;
+    font-size: 28px;
+  }
+  .next {
+    right: 80px;
+  }
+}
+
 #backToTop {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
 #backToTop.show {
   opacity: 1;
+}
+
+.faq-answer {
+  transition: max-height 0.3s ease, opacity 0.3s ease;
 }
