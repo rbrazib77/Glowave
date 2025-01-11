@@ -82,15 +82,11 @@ $(function () {
       behavior: "smooth",
     });
   });
-
   // Back to Top Button End
-
   const menuToggle = document.getElementById("menu-toggle");
   const menu = document.getElementById("menu");
   const mobileMenu = document.getElementById("mobile-menu");
   menuToggle.addEventListener("click", () => {
     mobileMenu.classList.toggle("hidden");
   });
-
-  
 });
